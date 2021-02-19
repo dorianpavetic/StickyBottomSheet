@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sheet_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="6dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/sheet_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="38dp"
+        android:includeFontPadding="false"
+        android:text="Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sheet_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/sheet_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheet_title"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_layout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sheet_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:paddingTop="8dp"
+        android:paddingBottom="11dp"
+        android:text="Button"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/sheet_recyclerview"
+        app:layout_constraintStart_toStartOf="@+id/sheet_recyclerview"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginTop="500dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
